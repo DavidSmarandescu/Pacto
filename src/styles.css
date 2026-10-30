@@ -201,7 +201,7 @@ input[type='range'] { width: 100%; padding: 0; border: 0; background: none; acce
 .option dd strong { font-family: var(--display); font-size: 18px; color: var(--cyan); }
 .vetos, .holders { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 8px; }
 .vetos li, .holders li { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.vetos .num-input input { width: 92px; }
+.vetos .num-input input { width: 104px; }
 
 /* Operaciones */
 .timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }

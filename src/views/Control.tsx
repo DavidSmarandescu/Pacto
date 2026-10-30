@@ -181,7 +181,7 @@ export default function Control({ s, res, mutate, colors }: ViewProps) {
           {before.vetoes.map((v) => (
             <li key={v.id}>
               <input className="grow" aria-label="Materia" value={v.name} onChange={(e) => mutate((d) => { const m = d.governance.vetoMatters.find((x) => x.id === v.id); if (m) m.name = e.target.value; })} />
-              <NumInput value={v.threshold} scale={100} step={1} max={100} suffix="%" onChange={(val) => mutate((d) => { const m = d.governance.vetoMatters.find((x) => x.id === v.id); if (m) m.threshold = Math.min(1, val); })} />
+              <NumInput value={v.threshold} scale={100} decimals={1} step={1} max={100} suffix="%" onChange={(val) => mutate((d) => { const m = d.governance.vetoMatters.find((x) => x.id === v.id); if (m) m.threshold = Math.min(1, val); })} />
               <Badge ok={v.foundersPass}>{v.foundersPass ? 'Fundadores deciden' : 'Bloqueable por inversores'}</Badge>
               <button className="icon" aria-label="Quitar" onClick={() => mutate((d) => { d.governance.vetoMatters = d.governance.vetoMatters.filter((x) => x.id !== v.id); })}>×</button>
             </li>

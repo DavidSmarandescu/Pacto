@@ -44,10 +44,11 @@ export function Field({ label, children, hint }: { label: string; children: Reac
 }
 
 /** Entrada numérica con sufijo. `scale` permite editar porcentajes guardados como 0..1. */
-export function NumInput({ value, onChange, suffix, step = 1, min = 0, max, scale = 1 }: {
-  value: number; onChange: (v: number) => void; suffix?: string; step?: number; min?: number; max?: number; scale?: number;
+export function NumInput({ value, onChange, suffix, step = 1, min = 0, max, scale = 1, decimals = 3 }: {
+  value: number; onChange: (v: number) => void; suffix?: string; step?: number; min?: number; max?: number; scale?: number; decimals?: number;
 }) {
-  const shown = Math.round(value * scale * 1000) / 1000;
+  const f = 10 ** decimals;
+  const shown = Math.round(value * scale * f) / f;
   return (
     <span className="num-input">
       <input
