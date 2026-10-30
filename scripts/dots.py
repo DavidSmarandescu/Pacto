@@ -20,9 +20,9 @@ random.seed(7)
 circ = []
 for cx, cy, n in cents:
     r = random.random()
-    cls = 'g' if r < 0.035 else ('m' if r < 0.25 else 'd')
+    cls = 'g' if r < 0.025 else ('m' if r < 0.25 else 'd')
     circ.append(f'<circle class="{cls}" cx="{cx:.1f}" cy="{cy:.1f}" r="2.6"/>')
 svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}">'
-       '<style>.d{fill:#3B6FD8;opacity:.22}.m{fill:#5B8DEF;opacity:.38}.g{fill:#5FE3FF;opacity:.9}</style>'
+       '<style>.d{fill:#3B6FD8;opacity:.16}.m{fill:#5B8DEF;opacity:.28}.g{fill:#5FE3FF;opacity:.75}</style>'
        + ''.join(circ) + '</svg>')
 open(out, 'w').write(svg)

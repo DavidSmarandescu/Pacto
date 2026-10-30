@@ -125,7 +125,7 @@ export interface StructureOption {
 
 /** Combinaciones de estructuras que se comparan en el simulador de control. */
 export function structureOptions(plural: number): StructureOption[] {
-  return [
+  const options: StructureOption[] = [
     {
       id: 'base', name: 'Venta de ordinarias', structure: 'ordinarias', votoPlural: 1, sindicacion: false,
       description: 'Sin estructura: el voto viaja con la participación y cada fundador vota por su cuenta.',
@@ -146,7 +146,8 @@ export function structureOptions(plural: number): StructureOption[] {
       id: 'todo', name: `Sin voto + voto plural ×${plural}`, structure: 'sinVoto', votoPlural: plural, sindicacion: true,
       description: 'Combinación máxima: venden sin voto y conservan voto reforzado en lo que no venden.',
     },
-  ].map((o) => ({ ...o, votoPlural: Math.max(1, o.votoPlural) }));
+  ];
+  return options.map((o) => ({ ...o, votoPlural: Math.max(1, o.votoPlural) }));
 }
 
 export { POOL_ID };
