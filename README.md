@@ -2,6 +2,8 @@
 
 > Vende parte de tu startup sin perder el control.
 
+**Demo:** https://davidsmarandescu.github.io/Pacto/
+
 Pacto es un simulador de cap table que funciona íntegramente en el navegador. Modela rondas, notas convertibles, pool de opciones, vesting y salidas de una **sociedad limitada española**. Su diferencia: separa los **derechos económicos** de los **derechos políticos** (voto) y calcula cuánto pueden vender los fundadores sin perder la mayoría.
 
 ![Cap table](docs/screenshots/escritorio-cap-table.png)
