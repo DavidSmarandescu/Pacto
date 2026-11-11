@@ -94,3 +94,11 @@ npm run shots
 ## Aviso legal
 
 Pacto es una herramienta orientativa y **no constituye asesoramiento jurídico, fiscal ni financiero**. Crear participaciones sin voto o con voto plural exige modificar los estatutos con las mayorías legales y, en su caso, el consentimiento de los socios afectados.
+
+## Licencia
+
+Copyright (C) 2026 David Smarandescu
+
+Pacto es software libre: puedes usarlo, estudiarlo, modificarlo y redistribuirlo bajo los términos de la **Licencia Pública General de GNU (GPL), versión 3 o posterior**, publicada por la Free Software Foundation. Si distribuyes una versión modificada, también debe publicarse bajo la GPL con su código fuente.
+
+Se distribuye SIN NINGUNA GARANTÍA. Consulta el archivo [LICENSE](LICENSE) para ver el texto completo.
